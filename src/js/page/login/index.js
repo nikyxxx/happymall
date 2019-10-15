@@ -1,5 +1,7 @@
 var $=require('jquery');
 
+console.log('login init');
+
 var login = function(){
     console.log('hello login');
     $('div').css('background-color','orange');
