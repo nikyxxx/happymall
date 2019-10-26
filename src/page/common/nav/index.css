@@ -1,0 +1,32 @@
+.nav{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    background: #eee;
+    overflow: hidden;
+}
+/* 用户部分样式 */
+.nav .user{
+    float: left;
+}
+
+.nav .user .link{
+    margin-right: 5px;
+}
+
+/* .user.login中间没有空格表示两个样式在同一个元素内使用 */
+.nav .user.login{
+    display:none;
+}
+
+
+
+/* 导航部分样式 */
+.nav .nav-list{
+    float: right;
+}
+
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}

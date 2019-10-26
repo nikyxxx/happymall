@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
     <%= require('html-loader!./layout/head.html') %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
 <body>
- 
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="page-wrap w">
+        <%= require('html-loader!./layout/nav-side.html') %>
+        <div class="content with-nav"></div>
+    </div>
+    <!-- body的一些内容大部分都放在app div中，包括一些后续动态生成的内容 -->
+    <div class="app">
+        <!--<div>
+            <a href="" class="link">link</a>
+            <a href="" class="link-text">link-text</a>
+        </div>
+        <div>
+            <a href="" class="btn">btn</a>
+            <a href="" class="btn btn-mini">btn-mini</a>
+        </div>
+        <div><i class="fa fa-user"></i></div>
+        <div class="loading"></div>
+        -->
+    </div>
+    <%= require('html-loader!./layout/footer.html') %>
+
+    <!-- index.js 依赖的js包都会从body底部加入，下面不再加入html内容，需要的话，在上面用预定义的html容器-->
 </body>
+
 </html>
